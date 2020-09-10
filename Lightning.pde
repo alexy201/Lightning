@@ -1,4 +1,5 @@
 int startX = 150, startY = 0, endX = 0, endY = 150;
+boolean flag = false;
 void setup()
 {
   size(300,300);
@@ -15,8 +16,14 @@ void draw()
     startX = endX;
     startY = endY;
   }
+  startX = 150; startY = 0; endX = 0; endY = 150;
 }
 void mousePressed()
 {
-  startX = 150; startY = 0; endX = 0; endY = 150;
+  flag = !flag;
+  if (!flag){
+    background(0);
+  }else {
+    background(255);
+  }
 }
